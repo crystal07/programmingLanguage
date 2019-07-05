@@ -1,0 +1,24 @@
+Standard ML of New Jersey v110.85 [built: Sat Dec 22 16:51:02 2018]
+[opening sol3.sml]
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+sol3.sml:117.21-127.92 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): RSP * RSP -> tournament
+  this rule: tournament * tournament -> tournament
+  in rule:
+    (PLAYER (n1,r1),MATCH (t1,t2)) =>
+      whosWinner (MATCH (PLAYER <exp>,whosWinner <exp>))
+sol3.sml:117.21-127.92 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): RSP * RSP -> tournament
+  this rule: tournament * tournament -> tournament
+  in rule:
+    (MATCH (t1,t2),PLAYER (n1,r1)) =>
+      whosWinner (MATCH (PLAYER <exp>,whosWinner <exp>))
+sol3.sml:117.21-127.92 Error: types of rules do not agree [tycon mismatch]
+  earlier rule(s): RSP * RSP -> tournament
+  this rule: tournament * tournament -> tournament
+  in rule:
+    (MATCH (t1,t2),MATCH (t3,t4)) =>
+      whosWinner (MATCH (whosWinner <exp>,whosWinner <exp>))
